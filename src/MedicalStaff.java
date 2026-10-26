@@ -84,3 +84,18 @@ class Pharmacist extends MedicalStaff {
         System.out.println("Duty          : Dispensing prescribed medications, checking for drug interactions, and managing pharmacy inventory.");
     }
 }
+class LabTechnician extends MedicalStaff {
+    private String laboratorySection;
+
+    public LabTechnician(String employeeId, String department, double workingHours, String laboratorySection) {
+        super(employeeId, department, workingHours);
+        this.laboratorySection = laboratorySection;
+    }
+
+    @Override
+    public void performDuties() {
+        System.out.println("Role          : Lab Technician");
+        System.out.println("Lab Section   : " + laboratorySection);
+        System.out.println("Duty          : Collecting biological specimens, running diagnostic laboratory tests, and recording test results.");
+    }
+}
