@@ -55,3 +55,13 @@ class Doctor extends MedicalStaff {
         System.out.println("Duty          : Diagnosing patients, prescribing treatments, and performing medical procedures.");
     }
 }
+class Nurse extends MedicalStaff {
+    private String shiftSchedule;
+
+    public Nurse(String employeeId, String department, double workingHours, String shiftSchedule) {
+        super(employeeId, department, workingHours);
+        this.shiftSchedule = shiftSchedule;
+    }
+    @Override
+    public void performDuties() {}
+}
