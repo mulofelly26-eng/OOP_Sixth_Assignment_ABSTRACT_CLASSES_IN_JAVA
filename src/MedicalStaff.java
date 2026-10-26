@@ -28,18 +28,30 @@ abstract class MedicalStaff {
 
     public abstract void performDuties();
 }
+// Doctor class inherits properties and methods from MedicalStaff
 class Doctor extends MedicalStaff {
+    // Stores the doctor's area of medical specialization
     private String specialization;
 
+    // Constructor initializes employee details and specialization
     public Doctor(String employeeId, String department, double workingHours, String specialization) {
+        // Calls the parent class constructor to initialize common attributes
         super(employeeId, department, workingHours);
+
+        // Assigns the specialization to the Doctor object
         this.specialization = specialization;
     }
 
+    // Overrides the abstract method from the MedicalStaff class
     @Override
     public void performDuties() {
+        // Displays the doctor's role
         System.out.println("Role          : Doctor");
+
+        // Displays the doctor's specialization
         System.out.println("Specialization: " + specialization);
+
+        // Displays the main duties performed by a doctor
         System.out.println("Duty          : Diagnosing patients, prescribing treatments, and performing medical procedures.");
     }
 }
