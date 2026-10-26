@@ -69,3 +69,18 @@ class Nurse extends MedicalStaff {
         System.out.println("Duty          : Monitoring patient vitals, administering medications, and providing bedside care.");
     }
 }
+class Pharmacist extends MedicalStaff {
+    private String licenseNumber;
+
+    public Pharmacist(String employeeId, String department, double workingHours, String licenseNumber) {
+        super(employeeId, department, workingHours);
+        this.licenseNumber = licenseNumber;
+    }
+
+    @Override
+    public void performDuties() {
+        System.out.println("Role          : Pharmacist");
+        System.out.println("License Number: " + licenseNumber);
+        System.out.println("Duty          : Dispensing prescribed medications, checking for drug interactions, and managing pharmacy inventory.");
+    }
+}
