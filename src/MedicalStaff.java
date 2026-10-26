@@ -28,3 +28,18 @@ abstract class MedicalStaff {
 
     public abstract void performDuties();
 }
+class Doctor extends MedicalStaff {
+    private String specialization;
+
+    public Doctor(String employeeId, String department, double workingHours, String specialization) {
+        super(employeeId, department, workingHours);
+        this.specialization = specialization;
+    }
+
+    @Override
+    public void performDuties() {
+        System.out.println("Role          : Doctor");
+        System.out.println("Specialization: " + specialization);
+        System.out.println("Duty          : Diagnosing patients, prescribing treatments, and performing medical procedures.");
+    }
+}
