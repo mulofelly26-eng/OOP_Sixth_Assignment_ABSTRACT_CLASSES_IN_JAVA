@@ -63,5 +63,9 @@ class Nurse extends MedicalStaff {
         this.shiftSchedule = shiftSchedule;
     }
     @Override
-    public void performDuties() {}
+    public void performDuties() {
+        System.out.println("Role          : Nurse");
+        System.out.println("Shift Schedule: " + shiftSchedule);
+        System.out.println("Duty          : Monitoring patient vitals, administering medications, and providing bedside care.");
+    }
 }
